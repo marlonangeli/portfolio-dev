@@ -1,0 +1,22 @@
+id: specs-index
+title: Specs Index
+doc_type: index
+category: documentation
+priority: high
+status: approved
+created: 2026-02-18
+updated: 2026-02-18
+version: 2.0.0
+language: en
+i18n:
+  - en
+  - pt-BR
+relates:
+  - specs/02-typed-metadata.md
+  - specs/templates/requirement.md
+  - specs/templates/task.md
+  - specs/templates/skill.md
+  - tasks/2026-02-18-specification-flow-reference.md
+changelog:
+  - Replaced legacy frontmatter model with sidecar typed metadata.
+  - Kept this file as the canonical requirements/specs index.

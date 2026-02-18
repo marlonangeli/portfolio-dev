@@ -1,0 +1,18 @@
+id: task-specification-flow-reference
+title: Specification Flow Reference
+doc_type: task
+category: workflow
+priority: medium
+status: draft
+created: 2026-02-18
+updated: 2026-02-18
+version: 1.0.0
+language: en
+i18n:
+  - en
+  - pt-BR
+relates:
+  - specs/00-index.md
+  - specs/02-typed-metadata.md
+changelog:
+  - Extracted from inline TODO to tracked task file.

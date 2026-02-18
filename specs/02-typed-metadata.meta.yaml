@@ -1,0 +1,22 @@
+id: typed-metadata-workflow
+title: Typed Metadata Workflow
+doc_type: guide
+category: documentation
+priority: critical
+status: approved
+created: 2026-02-18
+updated: 2026-02-18
+version: 1.0.0
+language: en
+i18n:
+  - en
+  - pt-BR
+relates:
+  - specs/_registry/categories.yaml
+  - specs/_registry/priorities.yaml
+  - specs/_registry/statuses.yaml
+  - schemas/meta.schema.json
+  - scripts/validate-meta.mjs
+  - .zed/settings.json
+changelog:
+  - Added centralized typed metadata workflow with schema and validation.

@@ -1,0 +1,8 @@
+{
+  "name": "portfolio-dev",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "meta:validate": "bun scripts/validate-meta.mjs"
+  }
+}

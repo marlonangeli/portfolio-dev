@@ -1,0 +1,19 @@
+id: development-stack
+title: Development Stack
+doc_type: spec
+category: development
+priority: critical
+status: review
+created: 2026-02-18
+updated: 2026-02-18
+version: 1.1.0
+language: en
+i18n:
+  - en
+  - pt-BR
+relates:
+  - specs/00-index.md
+  - specs/02-typed-metadata.md
+changelog:
+  - Migrated metadata from markdown frontmatter to sidecar.
+  - Normalized content to current project rules.

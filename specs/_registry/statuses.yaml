@@ -1,0 +1,20 @@
+- id: draft
+  name: Draft
+  description: Work in progress and open for edits.
+  aliases:
+    - wip
+- id: review
+  name: In Review
+  description: Ready for review but not finalized.
+  aliases:
+    - pending-review
+- id: approved
+  name: Approved
+  description: Reviewed and accepted as canonical.
+  aliases:
+    - accepted
+- id: deprecated
+  name: Deprecated
+  description: Kept for history and should not be extended.
+  aliases:
+    - legacy

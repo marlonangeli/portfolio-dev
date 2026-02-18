@@ -1,0 +1,32 @@
+- id: low
+  name: Low
+  description: Suggestions for future work or very quick, low-risk changes.
+  aliases:
+    - backlog
+  rank: 1
+  rules:
+    - Can be deferred without blocking delivery.
+- id: medium
+  name: Medium
+  description: Moderate complexity changes with limited dependency constraints.
+  aliases:
+    - normal
+  rank: 2
+  rules:
+    - Requires implementation but not urgent.
+- id: high
+  name: High
+  description: Complex work that requires review and can introduce breaking behavior.
+  aliases:
+    - urgent
+  rank: 3
+  rules:
+    - Needs reviewer attention before merge.
+- id: critical
+  name: Critical
+  description: Non-negotiable and top-priority work.
+  aliases:
+    - blocker
+  rank: 4
+  rules:
+    - Must be handled before lower priorities.

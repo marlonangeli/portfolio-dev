@@ -1,0 +1,18 @@
+id: skill-git
+title: Git Skill Notes
+doc_type: skill
+category: ai
+priority: high
+status: review
+created: 2026-02-18
+updated: 2026-02-18
+version: 1.0.0
+language: en
+i18n:
+  - en
+  - pt-BR
+relates:
+  - AGENTS.md
+  - specs/templates/skill.md
+changelog:
+  - Moved from skills/ to .ai/skills/ with sidecar metadata.

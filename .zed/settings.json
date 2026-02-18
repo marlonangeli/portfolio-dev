@@ -1,0 +1,14 @@
+{
+  "lsp": {
+    "yaml-language-server": {
+      "settings": {
+        "yaml": {
+          "validate": true,
+          "schemas": {
+            "./schemas/meta.schema.json": ["**/*.meta.yaml"],
+          },
+        },
+      },
+    },
+  },
+}

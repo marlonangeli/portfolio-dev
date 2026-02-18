@@ -1,0 +1,20 @@
+id: template-task
+title: Task Template
+doc_type: template
+category: workflow
+priority: medium
+status: approved
+created: 2026-02-18
+updated: 2026-02-18
+version: 1.0.0
+language: en
+i18n:
+  - en
+  - pt-BR
+relates:
+  - specs/_registry/categories.yaml
+  - specs/_registry/priorities.yaml
+  - specs/_registry/statuses.yaml
+  - schemas/meta.schema.json
+changelog:
+  - Added standard task template with typed sidecar metadata.

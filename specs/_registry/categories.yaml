@@ -1,0 +1,63 @@
+- id: security
+  name: Security
+  description: Security controls, vulnerabilities, hardening, and threat mitigation.
+  aliases:
+    - sec
+  extra:
+    requires-threat-model: false
+- id: style
+  name: Style
+  description: Coding and writing style conventions.
+  aliases:
+    - formatting
+  extra:
+    lintable: true
+- id: documentation
+  name: Documentation
+  description: Repository documentation, templates, indexes, and guides.
+  aliases:
+    - docs
+  extra:
+    audience: internal
+- id: performance
+  name: Performance
+  description: Runtime performance, bundle size, and optimization topics.
+  aliases:
+    - perf
+  extra:
+    benchmark-required: false
+- id: versioning
+  name: Versioning
+  description: Semantic versioning, release notes, and compatibility policy.
+  aliases:
+    - semver
+  extra:
+    release-impact: tracked
+- id: database
+  name: Database
+  description: Data modeling, migrations, and persistence concerns.
+  aliases:
+    - data
+  extra:
+    migration-required: false
+- id: development
+  name: Development
+  description: Tooling, runtime, framework, and developer workflow decisions.
+  aliases:
+    - dev
+  extra:
+    environment-impact: high
+- id: workflow
+  name: Workflow
+  description: Process, collaboration, and task execution guidance.
+  aliases:
+    - process
+  extra:
+    automation-friendly: true
+- id: ai
+  name: AI
+  description: AI agent skills, prompts, and automation instructions.
+  aliases:
+    - llm
+  extra:
+    model-aware: true
