@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "./schemas/curriculum/summary.schema.json",
+  "type": "object",
+  "required": ["summary"],
+  "additionalProperties": false,
+  "properties": {
+    "summary": {
+      "type": "object",
+      "required": ["id", "professional_summary", "objective"],
+      "additionalProperties": false,
+      "properties": {
+        "id": { "$ref": "./common.schema.json#/$defs/id" },
+        "professional_summary": { "$ref": "./common.schema.json#/$defs/translatableText" },
+        "objective": { "$ref": "./common.schema.json#/$defs/translatableText" }
+      }
+    }
+  }
+}

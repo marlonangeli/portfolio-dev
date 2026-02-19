@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "./schemas/curriculum/links.schema.json",
+  "type": "object",
+  "required": ["links"],
+  "additionalProperties": false,
+  "properties": {
+    "links": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "kind", "url", "label", "visibility"],
+        "additionalProperties": false,
+        "properties": {
+          "id": { "$ref": "./common.schema.json#/$defs/id" },
+          "kind": { "type": "string", "enum": ["portfolio", "github", "linkedin", "company", "repo", "article", "certificate", "talk", "demo", "contact"] },
+          "url": { "type": "string", "pattern": "^https://" },
+          "label": { "$ref": "./common.schema.json#/$defs/translatableText" },
+          "visibility": { "type": "string", "enum": ["public", "private"] }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "./schemas/curriculum/root.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "schema_version",
+    "default_locale",
+    "supported_locales",
+    "profile_mode",
+    "updated",
+    "sections",
+    "exports"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9._-]*$"
+    },
+    "schema_version": {
+      "type": "string",
+      "pattern": "^(0|[1-9]\\d*)\\.(0|[1-9]\\d*)\\.(0|[1-9]\\d*)(?:-[0-9A-Za-z.-]+)?(?:\\+[0-9A-Za-z.-]+)?$"
+    },
+    "default_locale": {
+      "type": "string",
+      "enum": ["pt-BR", "en"]
+    },
+    "supported_locales": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": ["pt-BR", "en"]
+      },
+      "uniqueItems": true,
+      "minItems": 1
+    },
+    "profile_mode": {
+      "type": "string",
+      "enum": ["public", "private"]
+    },
+    "updated": {
+      "type": "string",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+    },
+    "sections": {
+      "type": "object",
+      "required": ["profile", "summary", "experience", "projects", "education", "skills", "languages", "links"],
+      "additionalProperties": false,
+      "properties": {
+        "profile": { "type": "string" },
+        "summary": { "type": "string" },
+        "experience": { "type": "string" },
+        "projects": { "type": "string" },
+        "education": { "type": "string" },
+        "skills": { "type": "string" },
+        "languages": { "type": "string" },
+        "links": { "type": "string" }
+      }
+    },
+    "exports": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["json_resume", "json_resume_path"],
+      "properties": {
+        "json_resume": { "type": "boolean" },
+        "json_resume_path": { "type": "string", "minLength": 1 }
+      }
+    }
+  }
+}

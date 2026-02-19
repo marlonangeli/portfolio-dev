@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "./schemas/curriculum/profile.schema.json",
+  "type": "object",
+  "required": ["profile"],
+  "additionalProperties": false,
+  "properties": {
+    "profile": {
+      "type": "object",
+      "required": ["id", "name", "title", "location", "contact", "links", "availability"],
+      "additionalProperties": false,
+      "properties": {
+        "id": { "$ref": "./common.schema.json#/$defs/id" },
+        "name": { "$ref": "./common.schema.json#/$defs/translatableText" },
+        "title": { "$ref": "./common.schema.json#/$defs/translatableText" },
+        "location": {
+          "type": "object",
+          "required": ["country_code", "region"],
+          "additionalProperties": false,
+          "properties": {
+            "country_code": { "type": "string", "pattern": "^[A-Z]{2}$" },
+            "region": { "$ref": "./common.schema.json#/$defs/translatableText" }
+          }
+        },
+        "contact": {
+          "type": "object",
+          "required": ["email"],
+          "additionalProperties": false,
+          "properties": {
+            "email": { "type": "string", "minLength": 3 },
+            "picture_url": { "type": "string", "pattern": "^https://" }
+          }
+        },
+        "links": {
+          "type": "array",
+          "items": { "$ref": "./common.schema.json#/$defs/id" }
+        },
+        "availability": {
+          "type": "object",
+          "required": ["work_model"],
+          "additionalProperties": false,
+          "properties": {
+            "work_model": {
+              "type": "array",
+              "items": { "type": "string", "enum": ["remote", "hybrid", "on-site"] }
+            }
+          }
+        }
+      }
+    }
+  }
+}

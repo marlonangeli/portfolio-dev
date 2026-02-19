@@ -8,6 +8,7 @@ This is the canonical index for repository specs and requirement-related documen
 - `specs/templates/`: Markdown templates for requirements, tasks, and skills.
 - `tasks/`: extracted TODO/REVIEW/FIX work items that require tracking.
 - `.ai/skills/`: local AI skill notes.
+- `curriculum/`: CV data model rooted at `curriculum/cv.yaml`.
 
 ## Rules
 
@@ -20,6 +21,8 @@ This is the canonical index for repository specs and requirement-related documen
 ## References
 
 - Typed metadata guide: `specs/02-typed-metadata.md`
+- Curriculum data model: `specs/03-curriculum-data-model.md`
+- Curriculum validation and export: `specs/04-curriculum-validation.md`
 - Requirement template: `specs/templates/requirement.md`
 - Task template: `specs/templates/task.md`
 - Skill template: `specs/templates/skill.md`

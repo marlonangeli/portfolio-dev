@@ -5,8 +5,8 @@ category: documentation
 priority: critical
 status: approved
 created: 2026-02-18
-updated: 2026-02-18
-version: 1.0.0
+updated: 2026-02-19
+version: 1.1.0
 language: en
 i18n:
   - en
@@ -15,8 +15,13 @@ relates:
   - specs/_registry/categories.yaml
   - specs/_registry/priorities.yaml
   - specs/_registry/statuses.yaml
-  - schemas/meta.schema.json
+  - specs/templates/requirement.md
+  - specs/templates/task.md
+  - specs/templates/skill.md
+  - scripts/new.mjs
   - scripts/validate-meta.mjs
+  - schemas/meta.schema.json
   - .zed/settings.json
 changelog:
   - Added centralized typed metadata workflow with schema and validation.
+  - Added Bun CLI generation flow for requirements/tasks/skills.

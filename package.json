@@ -3,6 +3,13 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "meta:validate": "bun scripts/validate-meta.mjs"
+    "meta:validate": "bun scripts/validate-meta.mjs",
+    "curriculum:validate": "bun scripts/validate-curriculum.mjs",
+    "curriculum:export": "bun scripts/export-cv-jsonresume.mjs",
+    "json:validate": "bun scripts/validate-json.mjs",
+    "yaml:validate": "bun scripts/validate-yaml.mjs",
+    "validate": "bun run json:validate && bun run yaml:validate && bun run meta:validate && bun run curriculum:validate",
+    "new": "bun scripts/new.mjs",
+    "test": "bun test"
   }
 }

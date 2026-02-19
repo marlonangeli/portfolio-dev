@@ -1,6 +1,6 @@
 # Development Stack
 
-This project uses `bun` as runtime for fast local workflows, but metadata tooling is written to run with Node.js and stay Bun-compatible.
+This project uses `bun` as runtime for fast local workflows, but metadata tooling is written to run with Bun end-to-end.
 
 ## Candidate Frameworks
 

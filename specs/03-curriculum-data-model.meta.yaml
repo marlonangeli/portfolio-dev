@@ -1,0 +1,27 @@
+id: curriculum-data-model
+title: Curriculum Data Model
+doc_type: spec
+category: documentation
+priority: high
+status: approved
+created: 2026-02-19
+updated: 2026-02-19
+version: 1.0.0
+language: en
+i18n:
+  - en
+  - pt-BR
+relates:
+  - curriculum/cv.yaml
+  - curriculum/profile.yaml
+  - curriculum/summary.yaml
+  - curriculum/experience.yaml
+  - curriculum/projects.yaml
+  - curriculum/education.yaml
+  - curriculum/skills.yaml
+  - curriculum/languages.yaml
+  - curriculum/links.yaml
+  - curriculum/_registry/enums.yaml
+changelog:
+  - Added canonical curriculum model rooted at curriculum/cv.yaml.
+  - Documented string-or-locale-map support for translatable fields.

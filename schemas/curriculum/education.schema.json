@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "./schemas/curriculum/education.schema.json",
+  "type": "object",
+  "required": ["education"],
+  "additionalProperties": false,
+  "properties": {
+    "education": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "institution", "degree", "start", "end", "status"],
+        "additionalProperties": false,
+        "properties": {
+          "id": { "$ref": "./common.schema.json#/$defs/id" },
+          "institution": {
+            "type": "object",
+            "required": ["name", "website"],
+            "additionalProperties": false,
+            "properties": {
+              "name": { "$ref": "./common.schema.json#/$defs/translatableText" },
+              "short_name": { "type": "string", "minLength": 1 },
+              "website": { "$ref": "./common.schema.json#/$defs/httpsOrLinkId" }
+            }
+          },
+          "degree": { "$ref": "./common.schema.json#/$defs/translatableText" },
+          "study_type": { "$ref": "./common.schema.json#/$defs/translatableText" },
+          "start": { "$ref": "./common.schema.json#/$defs/yearMonth" },
+          "end": { "$ref": "./common.schema.json#/$defs/presentOrYearMonth" },
+          "status": { "type": "string", "enum": ["in-progress", "completed", "paused"] }
+        }
+      }
+    }
+  }
+}

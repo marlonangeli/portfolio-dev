@@ -37,12 +37,6 @@ Central registries live in `specs/_registry/`:
 - `priorities.yaml`
 - `statuses.yaml`
 
-To add a new category or priority:
-
-1. Add a new registry entry with `id`, `name`, `description`, and `aliases`.
-2. Update docs to use the new `id`.
-3. Run validation.
-
 ## Validation
 
 Run local validation:
@@ -59,6 +53,30 @@ Validation checks:
 - duplicate metadata IDs
 - `relates` paths exist
 - sidecar has a sibling Markdown source file
+
+## CLI Generation
+
+Create new requirement/task/skill files with metadata using Bun:
+
+```bash
+bun run new --type requirement --title "Requirement title"
+bun run new --type task --title "Task title"
+bun run new --type skill --title "Skill title"
+```
+
+Example linking a new requirement to an existing task:
+
+```bash
+bun run new --type requirement \
+  --title "Define taxonomy for curriculum images" \
+  --for-task tasks/2026-02-18-specification-flow-reference.md
+```
+
+This command writes:
+
+- a Markdown file from templates
+- a `.meta.yaml` sidecar with typed fields
+- and (when `--for-task` is used) updates the task metadata `relates` list as well
 
 ## Zed Autocomplete
 

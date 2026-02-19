@@ -5,14 +5,16 @@ category: documentation
 priority: high
 status: approved
 created: 2026-02-18
-updated: 2026-02-18
-version: 2.0.0
+updated: 2026-02-19
+version: 2.1.0
 language: en
 i18n:
   - en
   - pt-BR
 relates:
   - specs/02-typed-metadata.md
+  - specs/03-curriculum-data-model.md
+  - specs/04-curriculum-validation.md
   - specs/templates/requirement.md
   - specs/templates/task.md
   - specs/templates/skill.md
@@ -20,3 +22,4 @@ relates:
 changelog:
   - Replaced legacy frontmatter model with sidecar typed metadata.
   - Kept this file as the canonical requirements/specs index.
+  - Added curriculum model and validation references.

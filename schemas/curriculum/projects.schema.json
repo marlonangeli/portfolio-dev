@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "./schemas/curriculum/projects.schema.json",
+  "type": "object",
+  "required": ["projects"],
+  "additionalProperties": false,
+  "properties": {
+    "projects": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "name", "description", "links"],
+        "additionalProperties": false,
+        "properties": {
+          "id": { "$ref": "./common.schema.json#/$defs/id" },
+          "name": { "$ref": "./common.schema.json#/$defs/translatableText" },
+          "description": { "$ref": "./common.schema.json#/$defs/translatableText" },
+          "links": {
+            "type": "array",
+            "items": { "$ref": "./common.schema.json#/$defs/id" }
+          },
+          "technologies": {
+            "type": "array",
+            "items": { "type": "string", "minLength": 1 }
+          }
+        }
+      }
+    }
+  }
+}

@@ -5,10 +5,39 @@
         "yaml": {
           "validate": true,
           "schemas": {
-            "./schemas/meta.schema.json": ["**/*.meta.yaml"],
-          },
-        },
-      },
-    },
-  },
+            "./schemas/meta.schema.json": [
+              "**/*.meta.yaml"
+            ],
+            "./schemas/curriculum/root.schema.json": [
+              "curriculum/cv.yaml"
+            ],
+            "./schemas/curriculum/profile.schema.json": [
+              "curriculum/profile.yaml"
+            ],
+            "./schemas/curriculum/summary.schema.json": [
+              "curriculum/summary.yaml"
+            ],
+            "./schemas/curriculum/experience.schema.json": [
+              "curriculum/experience.yaml"
+            ],
+            "./schemas/curriculum/projects.schema.json": [
+              "curriculum/projects.yaml"
+            ],
+            "./schemas/curriculum/education.schema.json": [
+              "curriculum/education.yaml"
+            ],
+            "./schemas/curriculum/skills.schema.json": [
+              "curriculum/skills.yaml"
+            ],
+            "./schemas/curriculum/languages.schema.json": [
+              "curriculum/languages.yaml"
+            ],
+            "./schemas/curriculum/links.schema.json": [
+              "curriculum/links.yaml"
+            ]
+          }
+        }
+      }
+    }
+  }
 }
