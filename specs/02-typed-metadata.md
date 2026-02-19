@@ -80,7 +80,7 @@ This command writes:
 
 ## Zed Autocomplete
 
-`.zed/settings.json` maps `schemas/meta.schema.json` to all `**/*.meta.yaml` files.
+`.zed/settings.json` maps `schemas/generated/meta.schema.json` to all `**/*.meta.yaml` files.
 
 This enables autocomplete and inline diagnostics in Zed via YAML language server.
 

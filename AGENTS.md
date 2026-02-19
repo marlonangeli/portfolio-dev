@@ -62,7 +62,7 @@ Git metadata is not available in this workspace snapshot, so use Conventional Co
 
 PRs should include:
 - A short summary of what changed and why.
-- Affected paths (for example `curriculum/cv.yaml`, `schemas/curriculum/root.schema.json`).
+- Affected paths (for example `curriculum/cv.yaml`, `schemas/generated/curriculum/root.schema.json`).
 - Screenshots only when visual rendering is relevant.
 - Linked issue/task when applicable.
 

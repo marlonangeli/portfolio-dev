@@ -5,7 +5,7 @@ category: workflow
 priority: medium
 status: approved
 created: 2026-02-18
-updated: 2026-02-18
+updated: 2026-02-19
 version: 1.0.0
 language: en
 i18n:
@@ -15,6 +15,7 @@ relates:
   - specs/_registry/categories.yaml
   - specs/_registry/priorities.yaml
   - specs/_registry/statuses.yaml
-  - schemas/meta.schema.json
+  - schemas/generated/meta.schema.json
 changelog:
   - Added standard task template with typed sidecar metadata.
+  - Updated schema reference to generated path.
