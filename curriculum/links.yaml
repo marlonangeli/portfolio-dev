@@ -1,0 +1,50 @@
+links:
+  - id: linkedin-main
+    kind: linkedin
+    url: https://linkedin.com/in/marlonangeli
+    label:
+      pt-BR: LinkedIn
+      en: LinkedIn
+    visibility: public
+  - id: github-main
+    kind: github
+    url: https://github.com/marlonangeli
+    label:
+      pt-BR: GitHub
+      en: GitHub
+    visibility: public
+  - id: portfolio-main
+    kind: portfolio
+    url: https://marlonangeli.com.br
+    label:
+      pt-BR: Portfólio
+      en: Portfolio
+    visibility: public
+  - id: lar-company
+    kind: company
+    url: https://www.lar.ind.br
+    label:
+      pt-BR: Lar Cooperativa
+      en: Lar Cooperative
+    visibility: public
+  - id: project-blog-site
+    kind: portfolio
+    url: https://blog.marlonangeli.com.br
+    label:
+      pt-BR: Blog pessoal
+      en: Personal Blog
+    visibility: public
+  - id: project-blog-repo
+    kind: repo
+    url: https://github.com/marlonangeli/blog
+    label:
+      pt-BR: Repositório do blog
+      en: Blog repository
+    visibility: public
+  - id: project-duolingo-site
+    kind: demo
+    url: https://duolingo-streak-tracker.marlonangeli.com.br
+    label:
+      pt-BR: Duolingo Streak Tracker
+      en: Duolingo Streak Tracker
+    visibility: public

@@ -1,0 +1,20 @@
+projects:
+  - id: project-blog
+    name: Blog pessoal
+    description:
+      pt-BR: Blog pessoal feito a partir do Core do TabNews.
+      en: Personal blog built from the TabNews Core.
+    links:
+      - project-blog-site
+      - project-blog-repo
+    technologies:
+      - dotnet
+  - id: project-duolingo-streak-tracker
+    name:
+      pt-BR: Duolingo Streak tracker
+      en: Duolingo Streak Tracker
+    description: API para obter informações do usuário a partir de dados públicos do Duolingo.
+    links:
+      - project-duolingo-site
+    technologies:
+      - dotnet

@@ -1,0 +1,14 @@
+languages:
+  - id: lang-pt-br
+    code: pt-BR
+    name:
+      pt-BR: Português
+      en: Portuguese
+    level: native
+  - id: lang-en
+    code: en
+    name:
+      pt-BR: Inglês
+      en: English
+    level: b2
+    certificate_link: https://example.com/certificates/english

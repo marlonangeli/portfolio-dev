@@ -18,10 +18,11 @@ relates:
   - specs/templates/requirement.md
   - specs/templates/task.md
   - specs/templates/skill.md
-  - scripts/new.mjs
-  - scripts/validate-meta.mjs
-  - schemas/meta.schema.json
+  - scripts/new.ts
+  - scripts/validate-meta.ts
+  - schemas/generated/meta.schema.json
   - .zed/settings.json
 changelog:
   - Added centralized typed metadata workflow with schema and validation.
   - Added Bun CLI generation flow for requirements/tasks/skills.
+  - Migrated workflow scripts to strict TypeScript and generated schemas.

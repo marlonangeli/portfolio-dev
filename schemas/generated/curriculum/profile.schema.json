@@ -1,0 +1,144 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "./schemas/generated/curriculum/profile.schema.json",
+  "type": "object",
+  "properties": {
+    "profile": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z0-9][a-z0-9._-]*$"
+        },
+        "name": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1
+            },
+            {
+              "type": "object",
+              "propertyNames": {
+                "type": "string"
+              },
+              "additionalProperties": {
+                "type": "string",
+                "minLength": 1
+              }
+            }
+          ]
+        },
+        "title": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1
+            },
+            {
+              "type": "object",
+              "propertyNames": {
+                "type": "string"
+              },
+              "additionalProperties": {
+                "type": "string",
+                "minLength": 1
+              }
+            }
+          ]
+        },
+        "location": {
+          "type": "object",
+          "properties": {
+            "country_code": {
+              "type": "string",
+              "pattern": "^[A-Z]{2}$"
+            },
+            "region": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "minLength": 1
+                },
+                {
+                  "type": "object",
+                  "propertyNames": {
+                    "type": "string"
+                  },
+                  "additionalProperties": {
+                    "type": "string",
+                    "minLength": 1
+                  }
+                }
+              ]
+            }
+          },
+          "required": [
+            "country_code",
+            "region"
+          ],
+          "additionalProperties": false
+        },
+        "contact": {
+          "type": "object",
+          "properties": {
+            "email": {
+              "type": "string",
+              "minLength": 1
+            },
+            "picture_url": {
+              "type": "string",
+              "format": "uri",
+              "pattern": "^https:\\/\\/.*"
+            }
+          },
+          "required": [
+            "email"
+          ],
+          "additionalProperties": false
+        },
+        "links": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z0-9][a-z0-9._-]*$"
+          }
+        },
+        "availability": {
+          "type": "object",
+          "properties": {
+            "work_model": {
+              "minItems": 1,
+              "type": "array",
+              "items": {
+                "type": "string",
+                "enum": [
+                  "remote",
+                  "hybrid",
+                  "on-site"
+                ]
+              }
+            }
+          },
+          "required": [
+            "work_model"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "title",
+        "location",
+        "contact",
+        "links",
+        "availability"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "profile"
+  ],
+  "additionalProperties": false
+}

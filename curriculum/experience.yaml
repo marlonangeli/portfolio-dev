@@ -1,0 +1,14 @@
+experience:
+  - id: exp-lar-cooperativa
+    company:
+      name: Lar Cooperativa Agroindustrial
+      website: lar-company
+    role: Desenvolvedor de Software Junior
+    start: 2025-03
+    end: present
+    achievements:
+      - Atuei em serviços .NET em ambiente de microsserviços e containers.
+    related_links:
+      - lar-company
+    technologies:
+      - dotnet

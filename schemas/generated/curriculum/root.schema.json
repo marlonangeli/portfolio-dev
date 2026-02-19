@@ -1,0 +1,113 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "./schemas/generated/curriculum/root.schema.json",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9._-]*$"
+    },
+    "schema_version": {
+      "type": "string",
+      "pattern": "^(0|[1-9]\\d*)\\.(0|[1-9]\\d*)\\.(0|[1-9]\\d*)(?:-[0-9A-Za-z.-]+)?(?:\\+[0-9A-Za-z.-]+)?$"
+    },
+    "default_locale": {
+      "type": "string",
+      "minLength": 1
+    },
+    "supported_locales": {
+      "minItems": 1,
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "profile_mode": {
+      "type": "string",
+      "enum": [
+        "public",
+        "private"
+      ]
+    },
+    "updated": {
+      "type": "string",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+    },
+    "sections": {
+      "type": "object",
+      "properties": {
+        "profile": {
+          "type": "string",
+          "minLength": 1
+        },
+        "summary": {
+          "type": "string",
+          "minLength": 1
+        },
+        "experience": {
+          "type": "string",
+          "minLength": 1
+        },
+        "projects": {
+          "type": "string",
+          "minLength": 1
+        },
+        "education": {
+          "type": "string",
+          "minLength": 1
+        },
+        "skills": {
+          "type": "string",
+          "minLength": 1
+        },
+        "languages": {
+          "type": "string",
+          "minLength": 1
+        },
+        "links": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "profile",
+        "summary",
+        "experience",
+        "projects",
+        "education",
+        "skills",
+        "languages",
+        "links"
+      ],
+      "additionalProperties": false
+    },
+    "exports": {
+      "type": "object",
+      "properties": {
+        "json_resume": {
+          "type": "boolean"
+        },
+        "json_resume_path": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "json_resume"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "id",
+    "schema_version",
+    "default_locale",
+    "supported_locales",
+    "profile_mode",
+    "updated",
+    "sections",
+    "exports"
+  ],
+  "additionalProperties": false
+}

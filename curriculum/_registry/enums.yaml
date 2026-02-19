@@ -1,0 +1,35 @@
+profile_mode:
+  - public
+  - private
+work_model:
+  - remote
+  - hybrid
+  - on-site
+language_level:
+  - native
+  - c2
+  - c1
+  - b2
+  - b1
+  - a2
+  - a1
+skill_level:
+  - beginner
+  - intermediate
+  - advanced
+  - expert
+education_status:
+  - in-progress
+  - completed
+  - paused
+link_kind:
+  - portfolio
+  - github
+  - linkedin
+  - company
+  - repo
+  - article
+  - certificate
+  - talk
+  - demo
+  - contact

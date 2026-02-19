@@ -2,14 +2,25 @@
   "name": "portfolio-dev",
   "private": true,
   "type": "module",
+  "devDependencies": {
+    "@biomejs/biome": "^1.9.4",
+    "@types/bun": "^1.3.0",
+    "lefthook": "^1.11.11",
+    "typescript": "^5.9.3",
+    "zod": "^4.3.6"
+  },
   "scripts": {
-    "meta:validate": "bun scripts/validate-meta.mjs",
-    "curriculum:validate": "bun scripts/validate-curriculum.mjs",
-    "curriculum:export": "bun scripts/export-cv-jsonresume.mjs",
-    "json:validate": "bun scripts/validate-json.mjs",
-    "yaml:validate": "bun scripts/validate-yaml.mjs",
-    "validate": "bun run json:validate && bun run yaml:validate && bun run meta:validate && bun run curriculum:validate",
-    "new": "bun scripts/new.mjs",
+    "schema:generate": "bun scripts/generate-schemas.ts",
+    "meta:validate": "bun scripts/validate-meta.ts",
+    "curriculum:validate": "bun scripts/validate-curriculum.ts",
+    "curriculum:export": "bun scripts/export-cv-jsonresume.ts",
+    "json:validate": "bun scripts/validate-json.ts",
+    "yaml:validate": "bun scripts/validate-yaml.ts",
+    "typecheck": "bunx tsc --noEmit",
+    "lint": "bunx biome check src scripts tests package.json tsconfig.json biome.json lefthook.yml",
+    "format": "bunx biome format --write src scripts tests package.json tsconfig.json biome.json lefthook.yml .zed/settings.json README.md AGENTS.md",
+    "validate": "bun run schema:generate && bun run json:validate && bun run yaml:validate && bun run meta:validate && bun run curriculum:validate",
+    "new": "bun scripts/new.ts",
     "test": "bun test"
   }
 }

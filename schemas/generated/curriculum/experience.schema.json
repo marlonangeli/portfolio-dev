@@ -1,0 +1,132 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "./schemas/generated/curriculum/experience.schema.json",
+  "type": "object",
+  "properties": {
+    "experience": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z0-9][a-z0-9._-]*$"
+          },
+          "company": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  {
+                    "type": "object",
+                    "propertyNames": {
+                      "type": "string"
+                    },
+                    "additionalProperties": {
+                      "type": "string",
+                      "minLength": 1
+                    }
+                  }
+                ]
+              },
+              "website": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "required": [
+              "name",
+              "website"
+            ],
+            "additionalProperties": false
+          },
+          "role": {
+            "anyOf": [
+              {
+                "type": "string",
+                "minLength": 1
+              },
+              {
+                "type": "object",
+                "propertyNames": {
+                  "type": "string"
+                },
+                "additionalProperties": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              }
+            ]
+          },
+          "start": {
+            "type": "string",
+            "pattern": "^\\d{4}-\\d{2}$"
+          },
+          "end": {
+            "anyOf": [
+              {
+                "type": "string",
+                "pattern": "^\\d{4}-\\d{2}$"
+              },
+              {
+                "type": "string",
+                "const": "present"
+              }
+            ]
+          },
+          "achievements": {
+            "type": "array",
+            "items": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "minLength": 1
+                },
+                {
+                  "type": "object",
+                  "propertyNames": {
+                    "type": "string"
+                  },
+                  "additionalProperties": {
+                    "type": "string",
+                    "minLength": 1
+                  }
+                }
+              ]
+            }
+          },
+          "related_links": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^[a-z0-9][a-z0-9._-]*$"
+            }
+          },
+          "technologies": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        },
+        "required": [
+          "id",
+          "company",
+          "role",
+          "start",
+          "end"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [
+    "experience"
+  ],
+  "additionalProperties": false
+}

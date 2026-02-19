@@ -1,40 +1,76 @@
 {
+  "format_on_save": "on",
+  "languages": {
+    "JavaScript": {
+      "formatter": {
+        "language_server": {
+          "name": "biome"
+        }
+      },
+      "code_actions_on_format": {
+        "source.fixAll.biome": true,
+        "source.organizeImports.biome": true
+      }
+    },
+    "TypeScript": {
+      "formatter": {
+        "language_server": {
+          "name": "biome"
+        }
+      },
+      "code_actions_on_format": {
+        "source.fixAll.biome": true,
+        "source.organizeImports.biome": true
+      }
+    },
+    "TSX": {
+      "formatter": {
+        "language_server": {
+          "name": "biome"
+        }
+      },
+      "code_actions_on_format": {
+        "source.fixAll.biome": true,
+        "source.organizeImports.biome": true
+      }
+    },
+    "JSON": {
+      "formatter": {
+        "language_server": {
+          "name": "biome"
+        }
+      },
+      "code_actions_on_format": {
+        "source.fixAll.biome": true
+      }
+    },
+    "JSONC": {
+      "formatter": {
+        "language_server": {
+          "name": "biome"
+        }
+      },
+      "code_actions_on_format": {
+        "source.fixAll.biome": true
+      }
+    }
+  },
   "lsp": {
     "yaml-language-server": {
       "settings": {
         "yaml": {
           "validate": true,
           "schemas": {
-            "./schemas/meta.schema.json": [
-              "**/*.meta.yaml"
-            ],
-            "./schemas/curriculum/root.schema.json": [
-              "curriculum/cv.yaml"
-            ],
-            "./schemas/curriculum/profile.schema.json": [
-              "curriculum/profile.yaml"
-            ],
-            "./schemas/curriculum/summary.schema.json": [
-              "curriculum/summary.yaml"
-            ],
-            "./schemas/curriculum/experience.schema.json": [
-              "curriculum/experience.yaml"
-            ],
-            "./schemas/curriculum/projects.schema.json": [
-              "curriculum/projects.yaml"
-            ],
-            "./schemas/curriculum/education.schema.json": [
-              "curriculum/education.yaml"
-            ],
-            "./schemas/curriculum/skills.schema.json": [
-              "curriculum/skills.yaml"
-            ],
-            "./schemas/curriculum/languages.schema.json": [
-              "curriculum/languages.yaml"
-            ],
-            "./schemas/curriculum/links.schema.json": [
-              "curriculum/links.yaml"
-            ]
+            "./schemas/generated/meta.schema.json": ["**/*.meta.yaml"],
+            "./schemas/generated/curriculum/root.schema.json": ["curriculum/cv.yaml"],
+            "./schemas/generated/curriculum/profile.schema.json": ["curriculum/profile.yaml"],
+            "./schemas/generated/curriculum/summary.schema.json": ["curriculum/summary.yaml"],
+            "./schemas/generated/curriculum/experience.schema.json": ["curriculum/experience.yaml"],
+            "./schemas/generated/curriculum/projects.schema.json": ["curriculum/projects.yaml"],
+            "./schemas/generated/curriculum/education.schema.json": ["curriculum/education.yaml"],
+            "./schemas/generated/curriculum/skills.schema.json": ["curriculum/skills.yaml"],
+            "./schemas/generated/curriculum/languages.schema.json": ["curriculum/languages.yaml"],
+            "./schemas/generated/curriculum/links.schema.json": ["curriculum/links.yaml"]
           }
         }
       }

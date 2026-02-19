@@ -1,0 +1,20 @@
+profile:
+  id: profile-main
+  name: Marlon Angeli
+  title:
+    pt-BR: Desenvolvedor de Software
+    en: Software Developer
+  location:
+    country_code: BR
+    region: Paraná
+  contact:
+    email: iam@marlonangeli.com.br
+    picture_url: https://marlonangeli.com.br/avatar.jpg
+  links:
+    - linkedin-main
+    - github-main
+    - portfolio-main
+  availability:
+    work_model:
+      - remote
+      - hybrid

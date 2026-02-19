@@ -1,0 +1,3 @@
+[test]
+coverage = false
+coverageThreshold = { lines = 0.7, functions = 0.7 }

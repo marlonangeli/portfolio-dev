@@ -1,0 +1,15 @@
+education:
+  - id: education-utfpr-cc
+    institution:
+      name: Universidade Tecnológica Federal do Paraná
+      short_name: UTFPR
+      website: https://www.utfpr.edu.br
+    degree:
+      pt-BR: Bacharelado em Ciência da Computação
+      en: Bachelor in Computer Science
+    study_type:
+      pt-BR: Bacharelado
+      en: Bachelor
+    start: 2020-02
+    end: 2026-07
+    status: in-progress

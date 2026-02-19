@@ -1,0 +1,8 @@
+skills:
+  - id: skill-dotnet
+    name: .NET
+    level: advanced
+    category: backend
+    references:
+      - exp-lar-cooperativa
+      - project-blog

@@ -12,20 +12,21 @@ i18n:
   - en
   - pt-BR
 relates:
-  - scripts/validate-curriculum.mjs
-  - scripts/export-cv-jsonresume.mjs
-  - scripts/validate-json.mjs
-  - scripts/validate-yaml.mjs
-  - schemas/curriculum/common.schema.json
-  - schemas/curriculum/root.schema.json
-  - schemas/curriculum/profile.schema.json
-  - schemas/curriculum/summary.schema.json
-  - schemas/curriculum/experience.schema.json
-  - schemas/curriculum/projects.schema.json
-  - schemas/curriculum/education.schema.json
-  - schemas/curriculum/skills.schema.json
-  - schemas/curriculum/languages.schema.json
-  - schemas/curriculum/links.schema.json
+  - scripts/validate-curriculum.ts
+  - scripts/export-cv-jsonresume.ts
+  - scripts/validate-json.ts
+  - scripts/validate-yaml.ts
+  - scripts/generate-schemas.ts
+  - schemas/generated/curriculum/root.schema.json
+  - schemas/generated/curriculum/profile.schema.json
+  - schemas/generated/curriculum/summary.schema.json
+  - schemas/generated/curriculum/experience.schema.json
+  - schemas/generated/curriculum/projects.schema.json
+  - schemas/generated/curriculum/education.schema.json
+  - schemas/generated/curriculum/skills.schema.json
+  - schemas/generated/curriculum/languages.schema.json
+  - schemas/generated/curriculum/links.schema.json
 changelog:
   - Added curriculum validation and export command documentation.
   - Added Bun JSON/YAML validation commands and translation shape guidance.
+  - Migrated validation and export scripts to strict TypeScript with Zod-generated schemas.

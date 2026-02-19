@@ -20,9 +20,12 @@ There is no formal app build pipeline yet. Use lightweight checks while editing:
 - `bun run meta:validate`: validate typed metadata sidecars.
 - `bun run curriculum:validate`: validate curriculum model.
 - `bun run curriculum:export`: export JSON Resume-compatible output.
+- `bun run schema:generate`: generate JSON schemas from Zod contracts.
 - `bun run json:validate`: validate JSON files.
 - `bun run yaml:validate`: validate YAML files.
 - `bun run validate`: run all JSON/YAML/metadata/curriculum validations.
+- `bun run typecheck`: run strict TypeScript checks.
+- `bun run lint`: run Biome lint checks.
 - `bun test`: run Bun-native tests.
 - `bun run new --type requirement|task|skill --title "..."`: scaffold docs and sidecar metadata.
 - `mise trust && mise install`: trust and install repo-pinned tool versions from `.mise.toml`.
@@ -34,6 +37,7 @@ If a runtime/tooling stack is introduced later (Bun/etc.), add project scripts a
 ## Coding Style & Naming Conventions
 - Use Markdown for prose and YAML for structured data.
 - Use sidecar metadata files (`*.meta.yaml`) next to Markdown files.
+- Keep TypeScript + Zod contracts as the only typing source of truth; schemas are generated artifacts.
 - Keep YAML keys lowercase with hyphenated or clear semantic names.
 - For translatable curriculum fields, allow either a single string or a locale map (`pt-BR` required when using map form).
 - Use 2-space indentation in YAML; do not use tabs.
@@ -42,7 +46,7 @@ If a runtime/tooling stack is introduced later (Bun/etc.), add project scripts a
 - Keep docs in English and preserve future i18n support via metadata locales (including `pt-BR`).
 
 ## Testing Guidelines
-Automated tests are not configured currently.
+Automated tests are configured with Bun and should pass before submitting changes.
 Before submitting changes:
 - Validate YAML syntax with your editor/LSP.
 - Run `bun run meta:validate`.

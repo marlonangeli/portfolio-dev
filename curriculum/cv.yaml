@@ -1,0 +1,20 @@
+id: cv-main
+schema_version: 1.0.0
+default_locale: pt-BR
+supported_locales:
+  - pt-BR
+  - en
+profile_mode: private
+updated: 2026-02-19
+sections:
+  profile: curriculum/profile.yaml
+  summary: curriculum/summary.yaml
+  experience: curriculum/experience.yaml
+  projects: curriculum/projects.yaml
+  education: curriculum/education.yaml
+  skills: curriculum/skills.yaml
+  languages: curriculum/languages.yaml
+  links: curriculum/links.yaml
+exports:
+  json_resume: true
+  json_resume_path: dist/cv.resume.json

@@ -16,11 +16,14 @@ Marlon Angeli dev portfolio.
 
 ## Metadata Workflow
 
-- Registry source of truth: `specs/_registry/`
-- Metadata schema: `schemas/meta.schema.json`
-- Validator: `scripts/validate-meta.mjs`
-- Generator: `scripts/new.mjs`
+- Source of truth: TypeScript + Zod contracts in `src/contracts/`
+- Generated metadata schema: `schemas/generated/meta.schema.json`
+- Validator: `scripts/validate-meta.ts`
+- Generator: `scripts/new.ts`
+- Schema generation: `bun run schema:generate`
 - Run validation: `bun run meta:validate`
+- Run typecheck: `bun run typecheck`
+- Run lint: `bun run lint`
 - Run tests: `bun test`
 - Create docs: `bun run new --type requirement|task|skill --title "..."`
 - Guide: `specs/02-typed-metadata.md`
@@ -38,8 +41,8 @@ Marlon Angeli dev portfolio.
 ## Curriculum Workflow
 
 - Canonical root: `curriculum/cv.yaml`
-- Enum registry: `curriculum/_registry/enums.yaml`
-- Section schemas: `schemas/curriculum/*.schema.json`
+- Source of truth: TypeScript + Zod contracts in `src/contracts/curriculum.ts`
+- Generated section schemas: `schemas/generated/curriculum/*.schema.json`
 - Validate curriculum: `bun run curriculum:validate`
 - Export JSON Resume: `bun run curriculum:export`
 - Validate JSON files: `bun run json:validate`
